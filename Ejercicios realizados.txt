@@ -1,0 +1,1786 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+                                                        RUTINAS DE TEXTO con (import java.util.Scanner;) 1-19
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+Abajo de estos se encuentran ya con cuadros de dialogos!!!!
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+
+
+*
+ * Imprimir en pantalla Hola mundo 
+ * 
+ * 
+ *
+ *
+ * @author Adrian Castro
+ */
+
+
+
+package Interfaces;
+
+import java.util.Scanner;
+
+
+ 
+
+public class Rutina1 {
+    public static void main(String [] args){
+        
+     
+      
+        System.out.println("Hola Mundo");
+       
+       
+    }
+    
+}
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+ * Ejercicio que muestra si un alumno esta Aprobado o Reprobado
+ * 
+ * 
+ *
+ *
+ * @author Adrian Castro
+ */
+
+
+
+
+
+
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina2{
+    
+    public static void main(String[] args) {
+       int n1; 
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce nota");
+        n1=sc.nextInt();
+        if(n1>=7){
+            System.out.println("APROBADO");
+        }else if (n1<7){
+           System.out.println("REPROBADO");
+       
+    }
+    
+}
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Tablas de multiplicar asignando un valor inicial y un final 
+ con la estructura For.
+ * 
+ * 
+ *
+ *
+ * @author Adrian Castro
+ */
+
+
+
+
+
+
+package Interfaces;
+
+import java.util.Scanner;
+public class Rutina3 {
+
+    public static void main(String[] args) {
+        
+        Scanner dato=new Scanner(System.in);
+        
+        int e;
+        int s;
+        int resultado;
+		
+		System.out.println("valor de incio de la tabla");
+		e=dato.nextInt();
+                
+                System.out.println("valor final de la tabla");
+		s=dato.nextInt();
+		
+		for (int i=e;i<=s;i++){
+                    System.out.println("");
+                    int f=1;
+                    for (i=e;f<=10;f++){
+                     resultado=e*f;
+			System.out.println( e +" x "+f+" = "+resultado);   
+                       
+                    }
+                    e++;
+                    
+		}
+		
+
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/**
+ *Programa que pide un usuario ,y si este es icorrecto imprimir en pantalla el error
+ *
+ *
+ * @author Adrian Castro
+ */
+
+
+package Interfaces;
+
+
+import java.util.Scanner;
+
+public class Rutina4 {
+    public static void main(String[] args) {
+    String usuario="uma",respuesta="";   
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Introduzca su usuario"); 
+      respuesta=sc.next();
+      if (respuesta.equals(usuario)){
+      System.out.println("Sea Bienvenido");  
+      
+      }else{  
+     System.out.println("Error,usuario incorrecto");
+    
+}
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ * Iterando valores 1-100 con bucle while
+ * 
+ *
+ *@author Adrian Castro
+ *
+ */
+
+
+package Interfaces;
+
+
+
+public class Rutina5 {
+    
+    public static void main(String[] args) {
+      
+     
+        int var=1;
+        
+        while (var<=100 ){
+            System.out.println("Iterando :" + var + " veces");
+            var++;
+        }
+    }
+    
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ * Numeros de 2 en dos hasta 100 mediante ciclo for
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+
+
+public class Rutina6 {
+    
+    public static void main(String[] args) {
+        
+         
+        for (int num=0;num<=100;num=num+2){
+        System.out.println(num);
+            
+        }
+    }
+    
+}
+       
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * programa que pide la Suma,resta, de dos numeros
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+
+public class Rutina7 {
+    
+    public static void main(String[] args) {
+        
+        int n1,n2;
+        
+   Scanner sc=new Scanner(System.in);
+        
+        System.out.println("Introduzca 1");
+        n1=sc.nextInt();
+     
+        System.out.println("Introduzca 2");
+        n2=sc.nextInt();
+        
+        System.out.println(" La suma de los valores ingresados es   "   +(n1+n2)+"\n La resta es    "   +(n1-n2));
+        
+       
+    
+    }
+    
+}
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa que pide una nota y este lo clasifica en una escala de bueno a malo.
+ * 
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina8 {
+    
+    public static void main(String[] args) {
+        
+  int nota;
+  Scanner sc=new Scanner (System.in);
+ System.out.print("Introduzca una nota de 1 a 10: ");
+ nota=sc.nextInt();
+ if(nota==10 || nota==9)
+ System.out.println("EXCELENTE");
+ else
+ if(nota==9 || nota==8)
+ System.out.println("MUY BUENO");
+ else
+ if(nota==8 || nota==7)
+ System.out.println("BUENO");
+ else
+ if(nota==7 || nota==6 )
+ System.out.println("REGULAR");
+ else
+ if(nota==6 || nota==5 )
+ System.out.println("NECESITA MEJORAR");
+ else
+ if(nota==5 || nota==4 || nota==3 || nota==2 || nota==1 )
+ System.out.println("MALO");
+ }
+
+ }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa que registra 3 laboratorios y tres parciales elaborando un promedio
+ * final determinando si el estudiante esta Aprobado o Reprobado.
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina9 {
+    
+    public static void main(String[] args) {
+   
+       Scanner dato=new Scanner(System.in);
+       
+       double l1,p1,l2,p2,l3,p3, prom1,prom2,prom3,promfinal;
+       
+       System.out.println("-----------------------------------");
+       System.out.println("Bienvenidos a la base de notas UMA ");
+       System.out.println("-----------------------------------");
+       System.out.println("Digite el la nota de el primer laboratorio");
+       l1=dato.nextDouble();
+       while (l1<0 || l1>10){
+           
+          
+       }
+       
+       System.out.println("Digite la nota del el primer parcial");
+       p1=dato.nextDouble();
+       while (p1<0 || p1>10){
+           
+          
+       }
+       
+       System.out.println("Digite la nota de el segundo laboratorio");
+       l2=dato.nextDouble();
+       while (l2<0 || l2>10){
+           
+         
+       }
+       
+       System.out.println("Digite la nota de el segundoo parcial");
+       p2=dato.nextDouble();
+       while (p2<0 || p2>10){
+           
+           
+       }
+       
+       System.out.println("Digite la nota de el tercer laboratorio");
+       l3=dato.nextDouble();
+       while (l3<0 || l3>10){
+           
+           
+       }
+       
+       System.out.println("Digite la nota de el tercer parcial");
+       p3=dato.nextDouble();
+       while (p3<0 || p3>10){
+     
+      
+       }
+       
+       prom1=(l1*0.4)+(p1*0.6);
+       prom2=(l2*0.4)+(p2*0.6);
+       prom3=(l3*0.4)+(p3*0.6);
+         
+         promfinal=(prom1+prom2+prom3)/3;
+       
+       
+       System.out.println("El promedio de las notas es  " + promfinal);
+       
+       if (promfinal>=7){
+           System.out.print("Por lo tanto Su Estado es: ");
+           System.out.println("APROBADO");
+       }
+       else {
+           System.out.print("Por lo tanto Su Estado es: ");
+           System.out.println("REPROBADO");
+       }
+       
+       
+    }
+    
+}    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa mediante el cual se desea saber si el numero que se ingresa es
+ * de una cifra o de dos.
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina10 {
+    
+    
+    public static void main(String[] args) {
+    int num;
+        Scanner sc=new Scanner (System.in);
+        System.out.print("INGRESE NUMERO");
+        num=sc.nextInt();
+        if (num>0&&num<10){
+        System.out.print("ES DE UNA CIFRA"); 
+        }else if(num>10&&num<100){
+        System.out.print("ES DE DOS CIFRAS");     
+        }
+        
+    }
+    
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Tablas de multiplicar asignando un valor inicial y un final 
+  con la estructura While
+ 
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina11 {
+    
+    public static void main(String[] args) {
+        Scanner entrada=new Scanner(System.in);
+        
+        int e;
+        int s;
+   
+        System.out.println("Ingrese el numero de inicio de la tabla ");
+      //n=integer.paserInt(entrada.next());
+        e=entrada.nextInt();
+        
+        System.out.println("Ingrese el numero de salida de la tabla");
+      //n=integer.paserInt(entrada.next());
+        s=entrada.nextInt();
+        
+        int resultado;
+    
+       
+       while (e<=s){
+           int f=1;
+           while (f<=10){
+               
+               resultado=e*f;
+               
+               System.out.println(e+ "x" +f+ "=" +resultado );
+               
+               f++;
+               
+           }
+           e++;
+           System.out.println("");
+       }
+      
+      
+   
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ * programa que pide la Suma,resta,Division y Multiplicacion de dos numeros
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+
+public class Rutina12 {
+    
+    
+ public static void main(String[] args) {
+        int n1,n2;
+        Scanner sc=new Scanner (System.in);
+        System.out.println("INTRODUCE 1");
+        n1=sc.nextInt();
+        System.out.println("INTRODUCE 2");
+        n2=sc.nextInt();
+        
+       System.out.println("LA SUMA DE LOS VALORES INGRESADOS ES:"+(n1+n2)+"\nLa resta es:" +(n1-n2+"\nLa division es:" +(n1/n2+"\nLa multiplicacion es:" +(n1*n2)))); 
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------         
+/*
+ * Una zapatería vende zapatos deportivos, resulta que por la compra de zapatos
+ * que excede a un monto de $150 hay un 20% de descuento a los clientes.
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina13 {
+    
+ public static void main(String[] args) {
+        
+     double compra,descuento,total;
+    Scanner sc=new Scanner (System.in);
+    System.out.println("-----------------------------------");
+    System.out.println("Bienvenidos a la nueva zapateria     ");
+    System.out.println("-----------------------------------");
+    System.out.print("Ingrese el precio de los zapatos: ");
+    compra=sc.nextDouble();
+    if (compra>=150){
+        descuento=compra*0.20;
+        total=compra-descuento;
+        System.out.println("Por compras con un monto de 150 se le aplica un descuento de 20%");
+        System.out.println("Descuento: $"+descuento);
+        System.out.println("Total a pagar: $"+total);
+    } else{
+        System.out.println("Lo sentimos pero estos zapatos no aplican para el descuento");
+        System.out.println("Total a cancelar: $"+compra);
+    }
+        
+    }
+}               
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Un empleado necesita calcular su salario mensual, el cual se obtiene de la
+siguiente manera:
+Si trabaja 40 horas o menos se le paga $10 por hora
+Si trabaja más de 40 horas se le paga $15 por cada una de las primeras 40 horas
+y $20 por cada hora extra.
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+public class Rutina14 {
+    
+     public static void main(String[] args) {
+        Scanner dato=new Scanner(System.in);
+    
+       int hora;
+       int n1,n2=0,n3=0;
+       double sal1, sala2;
+       
+       System.out.println("Horas Elaboradas ");
+       hora=dato.nextInt();
+       
+       
+       if(hora<=40){
+          
+       sal1=(hora*10);
+         System.out.println("Su sueldo final sera "+ sal1);
+       }
+       else 
+           if(hora>40){
+             n1=(hora-40);
+             n2=n3*20;
+             sala2=n2+(40*20);
+             
+               System.out.println("Su sueldo final sera de  "+sala2  );
+           }
+   
+       }
+       }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * .Elegir cuál de las 5 notas ingresadas por el teclado es la mayor (ejemplo: 10, 5,2,8, 9.8)
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+
+import java.util.Scanner;
+
+
+
+public class Rutina15 {
+    
+    
+    public static void main(String[] args) {
+
+    double n1,n2,n3,n4,n5;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Ingrese las cinco notas");
+        System.out.print("Ingrese la Nota 1: ");
+        n1=sc.nextDouble();
+        System.out.print("Ingrese la Nota 2: ");
+        n2=sc.nextDouble();
+        System.out.print("Ingrese la Nota 3: ");
+        n3=sc.nextDouble();
+        System.out.print("Ingrese la Nota 4: ");
+        n4=sc.nextDouble();
+        System.out.print("Ingrese la Nota 5: ");
+        n5=sc.nextDouble();
+        if (n1>n2&&n1>n3&&n1>n4&&n1>n5){
+            System.out.println("Despues de haber ingresado las 5 notas la mayor nota es: "+n1);  
+        }else if (n2>n1&&n2>n3&&n2>n4&&n2>n5){
+            System.out.println("Despues de haber ingresado las 5 notas la mayor nota es: "+n2);
+        }else if (n3>n1&&n3>n2&&n3>n4&&n3>n5){
+            System.out.println("Despues de haber ingresado las 5 notas la mayor nota es: "+n3);
+        }else if (n4>n1&&n4>n2&&n4>n3&&n4>n5){
+            System.out.println("Despues de haber ingresado las 5 notas la mayor nota es: "+n4);
+        }else if (n5>n1&&n5>n2&&n5>n3&&n5>n4){
+            System.out.println("Despues de haber ingresado las 5 notas la mayor nota es: "+n5);
+        }
+            
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*Calcular el total de gastos realizados, en el mes, para un padre de familia,
+pensando que de Agua potable paga $50, de Luz eléctrica $20 y de colegiatura
+$55, Si el padre de familia tiene cinco hijos estudiando el padre recibe el 50% de
+descuento en pagos de colegio
+¿Cuánto paga en total?
+* @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+
+public class Rutina16 {
+     public static void main(String[] args) {
+         
+    double agua=50,luz=20,hijos,colegiatura=55,total;
+    
+  
+    
+        Scanner sc=new Scanner(System.in);
+        System.out.println("A continuacion la lista de los gastos del Mes:");
+        System.out.println("Agua potable $50");
+        System.out.println("Luz electrica $20");
+        System.out.println("Colegiatura $55 por cada hijo");
+        System.out.println("Descuento del 50% si el padre de familia si tiene cinco hijos esstudiando");
+        System.out.println("");
+        System.out.println("Ingrese la cantidad de hijos que asisten al colegio");
+        hijos=sc.nextInt();
+        if (hijos>=5){
+            total=(colegiatura*0.5)*hijos;
+            System.out.println("Si aplica el descuento en colegiaturas (50%)");
+            System.out.println("total de colegiaturas: $"+total);
+            System.out.println("Total gastos del mes: $"+(total+agua+luz));
+        } else{
+            total=colegiatura*hijos;
+            System.out.println("NO aplica el descuento de colegiaturas");
+            System.out.println("Total de colegiaturas: $"+total);
+            System.out.println("Total gastos del mes: $"+(total+agua+luz));
+        }
+        
+        
+    }
+}
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa que registra 3 laboratorios y tres parciales elaborando un promedio
+ * final determinando si el estudiante esta Aprobado o Reprobado,pero la
+nota ingresada no debe ser mayor a 10  y si es asi debe de 
+mostrar en pantalla un mensaje de error.
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+public class Rutina17 {
+    
+    public static void main(String[] args) {
+   
+       Scanner dato=new Scanner(System.in);
+       
+       double l1,p1,l2,p2,l3,p3, prom1,prom2,prom3,promfinal;
+       
+       System.out.println("-----------------------------------");
+       System.out.println("Bienvenidos a la base de notas UMA ");
+       System.out.println("-----------------------------------");
+       System.out.println("Digite el la nota de el primer laboratorio");
+       l1=dato.nextDouble();
+       while (l1<0 || l1>10){
+           
+       System.out.println("ERROR");    
+       System.out.println("La nota debe de estar entre 0-10");
+       System.out.println("--------------------------------");
+       System.out.println("Vuelva a digitar el primer laboratorio");
+       l1=dato.nextDouble();    
+       }
+       
+       System.out.println("Digite la nota del el primer parcial");
+       p1=dato.nextDouble();
+       while (p1<0 || p1>10){
+       
+       System.out.println("ERROR");    
+       System.out.println("La nota debe de estar entre 0-10");
+       System.out.println("--------------------------------");
+       System.out.println("Vuelva a digitar el primer parcial");
+       p1=dato.nextDouble();    
+       }   
+          
+       System.out.println("Digite la nota de el segundo laboratorio");
+       l2=dato.nextDouble();
+       while (l2<0 || l2>10){
+       
+       System.out.println("ERROR");    
+       System.out.println("La nota debe de estar entre 0-10");
+       System.out.println("--------------------------------");
+       System.out.println("Vuelva a digitar el segundo laboratorio");
+       l2=dato.nextDouble();    
+       }       
+       
+      
+       System.out.println("Digite la nota de el segundoo parcial");
+       p2=dato.nextDouble();
+       while (p2<0 || p2>10){
+       
+       System.out.println("ERROR");    
+       System.out.println("La nota debe de estar entre 0-10");
+       System.out.println("--------------------------------");
+       System.out.println("Vuelva a digitar el segundo parcial");
+       p2=dato.nextDouble();    
+       }           
+           
+       
+       System.out.println("Digite la nota de el tercer laboratorio");
+       l3=dato.nextDouble();
+       while (l3<0 || l3>10){
+           
+       System.out.println("ERROR");    
+       System.out.println("La nota debe de estar entre 0-10");
+       System.out.println("--------------------------------");
+       System.out.println("Vuelva a digitar el tercer laboratorio");
+       l3=dato.nextDouble();    
+       }           
+       
+       
+       System.out.println("Digite la nota de el tercer parcial");
+       p3=dato.nextDouble();
+       while (p3<0 || p3>10){
+     
+       System.out.println("ERROR");    
+       System.out.println("La nota debe de estar entre 0-10");
+       System.out.println("--------------------------------");
+       System.out.println("Vuelva a digitar el tercer parcial");
+       p3=dato.nextDouble();    
+       }       
+       
+       
+       prom1=(l1*0.4)+(p1*0.6);
+       prom2=(l2*0.4)+(p2*0.6);
+       prom3=(l3*0.4)+(p3*0.6);
+         
+       promfinal=(prom1+prom2+prom3)/3;
+       
+       
+       System.out.println("El promedio de las notas es  " + promfinal);
+       
+       if (promfinal>=7){
+           System.out.print("Por lo tanto Su Estado es: ");
+           System.out.println("APROBADO");
+       }
+       else {
+           System.out.print("Por lo tanto Su Estado es: ");
+           System.out.println("REPROBADO");
+       }
+       
+       
+    }
+    
+} 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Suma de dos numeros
+ * 
+ *
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+
+public class Rutina18 {
+    
+    
+  public static void main(String[] args) {
+   
+       Scanner dato=new Scanner(System.in);
+       
+        int valor1; 
+        int valor2;
+        int suma;
+        
+        System.out.println("Escriba el primer numero");
+        valor1=dato.nextInt();
+        System.out.println("Escriba el segundo numero");
+        valor2=dato.nextInt();
+    
+        suma=valor1+valor2;
+        
+        System.out.println("la suma de los numeros es : " + suma );
+        
+        
+  }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+/*
+ * Mostrar en pantalla mi nombre.
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import java.util.Scanner;
+
+
+
+
+public class Rutina19 {
+    public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        String nombre;
+       
+        System.out.print("Ingrese su nombre:");
+        String nom = teclado.nextLine();
+        System.out.print("Bienvenido "+ nom);
+            
+        
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+                                              RUTINAS CON CUADROS DE DIALOGO (import javax.swing.JOptionPane;) 1-19
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+ * Imprimir en pantalla Hola mundo 
+ * 
+ * @author Adrian Castro
+ */
+
+
+
+package Interfaces;
+import javax.swing.JOptionPane;
+
+ 
+
+public class Rutina1 {
+    public static void main(String [] args){
+        
+      JOptionPane.showMessageDialog(null,"Hola Mundo");  
+        
+        
+        
+        
+        
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ 
+ Ejercicio que muestra si un alumno esta Aprobado o Reprobado
+
+ *@author Adrian Castro
+ 
+ */
+package Interfaces;
+import javax.swing.JOptionPane;
+
+
+
+public class Rutina2 {
+     public static void main(String [] args){
+     String num1;
+     int valor1; 
+       num1 = JOptionPane.showInputDialog("Ingrese la nota");
+       valor1=Integer.parseInt(num1);
+        if(valor1>=7){
+            JOptionPane.showMessageDialog(null,"Aprobado");  
+        }else if (valor1<7){
+           JOptionPane.showMessageDialog(null,"Reprobado");  
+       
+    }
+    
+}
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ Tablas de multiplicar asignando un valor inicial y un final 
+ con la estructura For.
+ *
+ *@author Adrian Castro
+ */
+
+package Interfaces;
+import javax.swing.JOptionPane;
+
+public class Rutina3 {
+public static void main(String [] args){    
+    
+    
+        String num1;
+        String num2;
+        String total;
+          
+        int e;
+        int s;
+        int resultado;
+        
+		
+		 num1 = JOptionPane.showInputDialog("Inicio de la tabla");
+                 e=Integer.parseInt(num1);
+                
+                 num2 = JOptionPane.showInputDialog("Fin de la tabla");
+                 s=Integer.parseInt(num2);
+		
+		for (int i=e;i<=s;i++){
+                    
+                    
+                    int f=1;
+                    for (i=e;f<=10;f++){
+                     resultado=e*f;
+		JOptionPane.showMessageDialog(null, e +" x "+f+" = "+resultado);   
+                       
+                    }
+                    e++;
+                    
+		}
+		
+
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Interfaces;
+
+
+import javax.swing.JOptionPane;
+
+/**
+ *Programa que pide un usuario ,y si este es icorrecto imprimir en pantalla el error
+ *
+ *
+ * @author Adrian Castro
+ */
+public class Rutina4 {
+    public static void main(String[] args) {
+    String usuario="uma",respuesta="";
+        
+        JOptionPane.showMessageDialog(null,"Digite su usuario");
+          respuesta = JOptionPane.showInputDialog("Digite su contraseña");
+          if (respuesta.equals(usuario)){
+              JOptionPane.showMessageDialog(null," !!Sea Bienvenido  !!");
+      } else{ 
+         JOptionPane.showMessageDialog(null,"Error,El usuario es incorrecto");
+    }
+    
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ * Iterando valores 1-100 con bucle while
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+
+public class Rutina5 {
+    
+    public static void main(String[] args) {
+      
+     
+        int var=1;
+        
+        while (var<=100 ){
+           JOptionPane.showMessageDialog(null,"Iterando :" + var + " veces");
+            var++;
+        }
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ * Numeros de 2 en dos hasta 100 mediante ciclo for
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+
+public class Rutina6 {
+    
+    public static void main(String[] args) {
+        
+         
+        for (int num=0;num<=100;num=num+2){
+        JOptionPane.showMessageDialog(null,num);
+            
+        }
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * programa que pide la Suma,resta, de dos numeros
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+
+public class Rutina7 {
+    
+    public static void main(String[] args) {
+        
+        String valor1;
+        String valor2;
+        
+        int n1;
+        int n2;
+  
+        
+        valor1 = JOptionPane.showInputDialog("Introduzca 1");
+                 n1=Integer.parseInt(valor1);
+     
+        valor2 = JOptionPane.showInputDialog("Introduzca 2");
+                 n2=Integer.parseInt(valor2);
+        
+        JOptionPane.showMessageDialog(null," La suma de los valores ingresados es   "   +(n1+n2)+"\n La resta es    "   +(n1-n2));
+        
+       
+    
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa que pide una nota y este lo clasifica en una escala de bueno a malo.
+ * 
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+public class Rutina8 {
+    
+    public static void main(String[] args) {
+    
+  String valor;
+  int nota;
+ 
+ JOptionPane.showMessageDialog(null,"Introduzca una nota de 1 a 10: ");
+ valor = JOptionPane.showInputDialog("Introduzca 1");
+                 nota=Integer.parseInt(valor);
+ if(nota==10 || nota==9)
+ JOptionPane.showMessageDialog(null,"EXCELENTE");
+ else
+ if(nota==9 || nota==8)
+ JOptionPane.showMessageDialog(null,"MUY BUENO");
+ else
+ if(nota==8 || nota==7)
+ JOptionPane.showMessageDialog(null,"BUENO");
+ else
+ if(nota==7 || nota==6 )
+ JOptionPane.showMessageDialog(null,"REGULAR");
+ else
+ if(nota==6 || nota==5 )
+ JOptionPane.showMessageDialog(null,"NECESITA MEJORAR");
+ else
+ if(nota==5 || nota==4 || nota==3 || nota==2 || nota==1 )
+ JOptionPane.showMessageDialog(null,"MALO");
+ }
+
+ }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa que registra 3 laboratorios y tres parciales elaborando un promedio
+ * final determinando si el estudiante esta Aprobado o Reprobado.
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+public class Rutina9 {
+    
+   public static void main(String[] args) {
+   
+      
+       
+       
+       
+       String valor1;
+       String valor2;
+       String valor3;
+       String valor4;
+       String valor5;
+       String valor6;
+       String pro1;
+       String pro2;
+       String pro3;
+       String profinal;
+       
+       int l1;
+       int p1;
+       int l2;
+       int p2;
+       int l3;
+       int p3;
+       int promedio1;
+       int promedio2;
+       int promedio3;
+       
+       
+       
+       JOptionPane.showMessageDialog(null,"Bienvenidos a la base de notas UMA ");
+       
+       JOptionPane.showMessageDialog(null,"Digite el la nota de el primer laboratorio");
+       valor1 = JOptionPane.showInputDialog("");
+                 l1=Integer.parseInt(valor1);
+       while (l1<0 || l1>10){
+           
+          
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota del el primer parcial");
+       valor2 = JOptionPane.showInputDialog("");
+                 p1=Integer.parseInt(valor2);
+       while (p1<0 || p1>10){
+           
+          
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el segundo laboratorio");
+       valor3 = JOptionPane.showInputDialog("");
+                 l2=Integer.parseInt(valor3);
+       while (l2<0 || l2>10){
+           
+         
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el segundoo parcial");
+       valor4 = JOptionPane.showInputDialog("");
+                 p2=Integer.parseInt(valor4);
+       while (p2<0 || p2>10){
+           
+           
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el tercer laboratorio");
+       valor5 = JOptionPane.showInputDialog("");
+                 l3=Integer.parseInt(valor5);
+       while (l3<0 || l3>10){
+           
+           
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el tercer parcial");
+       valor6 = JOptionPane.showInputDialog("");
+                 p3=Integer.parseInt(valor6);
+       while (p3<0 || p3>10){
+     
+      
+       }
+       
+       double prom1 = (l1*0.4)+(p1*0.6);
+       double prom2 = (l2*0.4)+(p2*0.6);
+       double prom3 = (l3*0.4)+(p3*0.6);
+         
+       double promfinal = (prom1+prom2+prom3)/3;
+       
+       
+       JOptionPane.showMessageDialog(null,"El promedio de la nota final es:  " + promfinal);
+       
+       if (promfinal>=7){
+           JOptionPane.showMessageDialog(null,"Por lo tanto Su Estado es: APROBADO ");
+           
+       }
+       else {
+           JOptionPane.showMessageDialog(null,"Por lo tanto Su Estado es: REPROBADO ");
+           
+       }
+       
+       
+    }
+    
+} 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa mediante el cual se desea saber si el numero que se ingresa es
+ * de una cifra o de dos.
+ *
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+public class Rutina10 {
+    
+    
+    public static void main(String[] args) {
+     
+    String valor;    
+    int num;
+        
+        JOptionPane.showMessageDialog(null,"INGRESE NUMERO");
+        valor = JOptionPane.showInputDialog("Introduzca 1");
+                 num=Integer.parseInt(valor);
+        
+        
+        if (num>0&&num<10){
+        JOptionPane.showMessageDialog(null,"ES DE UNA CIFRA"); 
+        }else if(num>10&&num<100){
+       JOptionPane.showMessageDialog(null,"ES DE DOS CIFRAS");     
+        }
+        
+    }
+    
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Tablas de multiplicar asignando un valor inicial y un final 
+  con la estructura While.
+ *
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+public class Rutina11 {
+    
+    public static void main(String[] args) {
+        
+        String num1;
+        String num2;
+        String total;
+        
+        int e;
+        int s;
+   
+        num1 = JOptionPane.showInputDialog("Inicio de la tabla");
+                 e=Integer.parseInt(num1);
+                
+        num2 = JOptionPane.showInputDialog("Fin de la tabla");
+                 s=Integer.parseInt(num2);
+        
+        int resultado;
+    
+       
+       while (e<=s){
+           int f=1;
+           while (f<=10){
+               
+               resultado=e*f;
+               
+               JOptionPane.showMessageDialog(null,e+ "x" +f+ "=" +resultado );
+               
+               f++;
+               
+           }
+           e++;
+           JOptionPane.showMessageDialog(null,"");
+       }
+      
+      
+   
+    }
+    
+}
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * 
+ * programa que pide la Suma,resta,Division y Multiplicacion de dos numeros
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+
+import javax.swing.JOptionPane;
+
+
+
+public class Rutina12 {
+    
+    
+ public static void main(String[] args) {
+     
+        String valor1;
+        String valor2;
+        
+        int n1;
+        int n2;
+  
+        
+        valor1 = JOptionPane.showInputDialog("Introduzca 1");
+                 n1=Integer.parseInt(valor1);
+     
+        valor2 = JOptionPane.showInputDialog("Introduzca 2");
+                 n2=Integer.parseInt(valor2);
+        
+        JOptionPane.showMessageDialog(null,"LA SUMA DE LOS VALORES INGRESADOS ES: "+(n1+n2)+"\nLa resta es: " +(n1-n2+"\nLa division es: " +(n1/n2+"\nLa multiplicacion es: " +(n1*n2)))); 
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Una zapatería vende zapatos deportivos, resulta que por la compra de zapatos
+ * que excede a un monto de $150 hay un 20% de descuento a los clientes.
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+
+import javax.swing.JOptionPane;
+
+
+public class Rutina13 {
+    
+ public static void main(String[] args) {
+        
+     
+     String valor1;
+     String valor2;
+     String valor3;
+     
+     int compra;
+     int descuento;
+     int total;
+    
+    JOptionPane.showMessageDialog(null,"Bienvenidos a la nueva zapateria     ");
+   
+    valor1 = JOptionPane.showInputDialog("Ingrese el precio de los zapatos");
+                 compra=Integer.parseInt(valor1);
+    if (compra>=150){
+        descuento=(int) (compra*0.20);
+        total=compra-descuento;
+        JOptionPane.showMessageDialog(null,"Por compras con un monto de 150 se le aplica un descuento de 20%");
+        JOptionPane.showMessageDialog(null,"Descuento: $"+descuento);
+        JOptionPane.showMessageDialog(null,"Total a pagar: $"+total);
+    } else{
+        JOptionPane.showMessageDialog(null,"Lo sentimos pero estos zapatos no aplican para el descuento");
+        JOptionPane.showMessageDialog(null,"Total a cancelar: $"+compra);
+    }
+        
+    }
+}   
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ /*
+ * Un empleado necesita calcular su salario mensual, el cual se obtiene de la
+siguiente manera:
+Si trabaja 40 horas o menos se le paga $10 por hora
+Si trabaja más de 40 horas se le paga $15 por cada una de las primeras 40 horas
+y $20 por cada hora extra.
+ * 
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+
+import javax.swing.JOptionPane;
+
+
+
+
+public class Rutina14 {
+    
+    
+     public static void main(String[] args) {
+      
+       
+       
+       String val1;
+       String val2;
+       String val3;
+       String val4;
+       String val5;
+       
+       int hora;
+       int n1;
+       int n2;
+       int n3 = 0;
+       int sal1;
+       int sala2;
+       
+       
+       val1 = JOptionPane.showInputDialog("Horas Elaboradas");
+                 hora=Integer.parseInt(val1);
+       
+       
+       if(hora<=40){
+          
+       sal1=(hora*10);
+         JOptionPane.showMessageDialog(null,"Su sueldo final sera $ "+ sal1);
+       }
+       else 
+           if(hora>40){
+             n1=(hora-40);
+             n2=n3*20;
+             sala2=n2+(40*20);
+             
+               JOptionPane.showMessageDialog(null,"Su sueldo final sera de $ "+sala2  );
+           }
+   
+       }
+       }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * .Elegir cuál de las 5 notas ingresadas por el teclado es la mayor (ejemplo: 10, 5,2,8, 9.8)
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+
+import javax.swing.JOptionPane;
+
+
+public class Rutina15 {
+    
+    
+    public static void main(String[] args) {
+      
+     
+        
+        
+        String num1;
+        String num2;
+        String num3;
+        String num4;
+        String num5;
+        
+        int n1;
+        int n2;
+        int n3;
+        int n4;
+        int n5;
+        
+        
+        
+        
+        JOptionPane.showMessageDialog(null,"Ingrese las cinco notas");
+        num1 = JOptionPane.showInputDialog("Ingresa la Nota 1");
+                 n1=Integer.parseInt(num1);
+        num2 = JOptionPane.showInputDialog("Ingresa la Nota 2");
+                 n2=Integer.parseInt(num2);
+        num3 = JOptionPane.showInputDialog("Ingresa la Nota 3");
+                 n3=Integer.parseInt(num3);
+        num4 = JOptionPane.showInputDialog("Ingresa la Nota 4");
+                 n4=Integer.parseInt(num4);
+        num5 = JOptionPane.showInputDialog("Ingresa la Nota 5");
+                 n5=Integer.parseInt(num5);
+        if (n1>n2&&n1>n3&&n1>n4&&n1>n5){
+            JOptionPane.showMessageDialog(null,"Despues de haber ingresado las 5 notas la mayor nota es: "+n1);  
+        }else if (n2>n1&&n2>n3&&n2>n4&&n2>n5){
+            JOptionPane.showMessageDialog(null,"Despues de haber ingresado las 5 notas la mayor nota es: "+n2);
+        }else if (n3>n1&&n3>n2&&n3>n4&&n3>n5){
+            JOptionPane.showMessageDialog(null,"Despues de haber ingresado las 5 notas la mayor nota es: "+n3);
+        }else if (n4>n1&&n4>n2&&n4>n3&&n4>n5){
+           JOptionPane.showMessageDialog(null,"Despues de haber ingresado las 5 notas la mayor nota es: "+n4);
+        }else if (n5>n1&&n5>n2&&n5>n3&&n5>n4){
+            JOptionPane.showMessageDialog(null,"Despues de haber ingresado las 5 notas la mayor nota es: "+n5);
+        }
+            
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*Calcular el total de gastos realizados, en el mes, para un padre de familia,
+pensando que de Agua potable paga $50, de Luz eléctrica $20 y de colegiatura
+$55, Si el padre de familia tiene cinco hijos estudiando el padre recibe el 50% de
+descuento en pagos de colegio
+¿Cuánto paga en total?
+* @author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+
+
+
+public class Rutina16 {
+     public static void main(String[] args) {
+         
+    
+    
+    String n1;
+    String n2;
+    String n3;
+    String n4;
+    String n5;
+    
+    int agua =50 ;
+    int luz = 20;
+    int hijos = 0;
+    int colegiatura = 55;
+    int total;
+    
+       
+        JOptionPane.showMessageDialog(null,"A continuacion la lista de los gastos del Mes:");
+        JOptionPane.showMessageDialog(null,"Agua potable $50\nLuz electrica $20\nColegiatura $55 por cada hijo,Descuento del 50% si el padre de familia si tiene cinco hijos estudiando");
+        JOptionPane.showMessageDialog(null,"Ingrese la cantidad de hijos que asisten al colegio");
+         n3 = JOptionPane.showInputDialog("");
+                 hijos=Integer.parseInt(n3);
+        if (hijos>=5){
+            total=(int) ((colegiatura*0.5)*hijos);
+            JOptionPane.showMessageDialog(null,"Si aplica el descuento en colegiaturas (50%)");
+            JOptionPane.showMessageDialog(null,"total de colegiaturas: $"+total);
+            JOptionPane.showMessageDialog(null,"Total gastos del mes: $"+(total+agua+luz));
+        } else{
+            total=colegiatura*hijos;
+            JOptionPane.showMessageDialog(null,"NO aplica el descuento de colegiaturas");
+            JOptionPane.showMessageDialog(null,"Total de colegiaturas: $"+total);
+            JOptionPane.showMessageDialog(null,"Total gastos del mes: $"+(total+agua+luz));
+        }
+        
+        
+    }
+}   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Programa que registra 3 laboratorios y tres parciales elaborando un promedio
+ * final determinando si el estudiante esta Aprobado o Reprobado,pero la
+nota ingresada no debe ser mayor a 10  y si es asi debe de 
+mostrar en pantalla un mensaje de error.
+ * 
+ * 
+ *@author Adrian Castro
+ */
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+
+
+public class Rutina17 {
+    public static void main(String[] args) {
+    
+    String valor1;
+       String valor2;
+       String valor3;
+       String valor4;
+       String valor5;
+       String valor6;
+       String pro1;
+       String pro2;
+       String pro3;
+       String profinal;
+       
+       int l1;
+       int p1;
+       int l2;
+       int p2;
+       int l3;
+       int p3;
+       int promedio1;
+       int promedio2;
+       int promedio3;
+       
+       
+       
+       JOptionPane.showMessageDialog(null,"Bienvenidos a la base de notas UMA ");
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el primer laboratorio");
+       valor1 = JOptionPane.showInputDialog("");
+                 l1=Integer.parseInt(valor1);
+       while (l1<0 || l1>10){
+       
+       JOptionPane.showMessageDialog(null,"ERROR");
+       JOptionPane.showMessageDialog(null,"La nota debe de estar entre 0-10");
+               JOptionPane.showMessageDialog(null,"Vuelva a digitar el primer laboratorio");
+               valor1 = JOptionPane.showInputDialog("");
+                 l1=Integer.parseInt(valor1);
+       l1=Integer.parseInt(valor1);
+       }    
+          
+       
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota del el primer parcial");
+       valor2 = JOptionPane.showInputDialog("");
+                 p1=Integer.parseInt(valor2);
+       while (p1<0 || p1>10){
+       
+        JOptionPane.showMessageDialog(null,"ERROR");   
+       JOptionPane.showMessageDialog(null,"La nota debe de estar entre 0-10");
+               JOptionPane.showMessageDialog(null,"Vuelva a digitar el primer parcial");
+               valor2 = JOptionPane.showInputDialog("");
+                 p1=Integer.parseInt(valor2);
+       l1=Integer.parseInt(valor1);    
+          
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el segundo laboratorio");
+       valor3 = JOptionPane.showInputDialog("");
+                 l2=Integer.parseInt(valor3);
+       while (l2<0 || l2>10){
+       
+       JOptionPane.showMessageDialog(null,"ERROR");   
+       JOptionPane.showMessageDialog(null,"La nota debe de estar entre 0-10");
+               JOptionPane.showMessageDialog(null,"Vuelva a digitar el segundo laboratorio");
+               valor3 = JOptionPane.showInputDialog("");
+                 l2=Integer.parseInt(valor1);
+       l2=Integer.parseInt(valor3);    
+           
+         
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el segundoo parcial");
+       valor4 = JOptionPane.showInputDialog("");
+                 p2=Integer.parseInt(valor4);
+       while (p2<0 || p2>10){
+         
+       JOptionPane.showMessageDialog(null,"ERROR");    
+       JOptionPane.showMessageDialog(null,"La nota debe de estar entre 0-10");
+               JOptionPane.showMessageDialog(null,"Vuelva a digitar la segunda nota del parcial");
+               valor4 = JOptionPane.showInputDialog("");
+                 p2=Integer.parseInt(valor4);
+       p2=Integer.parseInt(valor1);    
+           
+           
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el tercer laboratorio");
+       valor5 = JOptionPane.showInputDialog("");
+                 l3=Integer.parseInt(valor5);
+       while (l3<0 || l3>10){
+           
+       JOptionPane.showMessageDialog(null,"ERROR");
+       JOptionPane.showMessageDialog(null,"La nota debe de estar entre 0-10");
+               JOptionPane.showMessageDialog(null,"Vuelva a digitar el tercer laboratorio");
+               valor5 = JOptionPane.showInputDialog("");
+                 l3=Integer.parseInt(valor5);
+       l3=Integer.parseInt(valor5);    
+       }
+       
+       JOptionPane.showMessageDialog(null,"Digite la nota de el tercer parcial");
+       valor6 = JOptionPane.showInputDialog("");
+                 p3=Integer.parseInt(valor6);
+       while (p3<0 || p3>10){
+     
+       JOptionPane.showMessageDialog(null,"ERROR");    
+       JOptionPane.showMessageDialog(null,"La nota debe de estar entre 0-10");
+               JOptionPane.showMessageDialog(null,"Vuelva a digitar el primer laboratorio");
+               valor6 = JOptionPane.showInputDialog("");
+                 p3=Integer.parseInt(valor6);
+       p3=Integer.parseInt(valor6);    
+      
+       }
+       
+       double prom1 = (l1*0.4)+(p1*0.6);
+       double prom2 = (l2*0.4)+(p2*0.6);
+       double prom3 = (l3*0.4)+(p3*0.6);
+         
+       double promfinal = (prom1+prom2+prom3)/3;
+       
+       
+       JOptionPane.showMessageDialog(null,"El promedio de la nota final es:  " + promfinal);
+       
+       if (promfinal>=7){
+           JOptionPane.showMessageDialog(null,"Por lo tanto Su Estado es: APROBADO ");
+           
+       }
+       else {
+           JOptionPane.showMessageDialog(null,"Por lo tanto Su Estado es: REPROBADO ");
+           
+       }
+       
+       
+    }
+    
+} 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Suma de dos numeros
+ * 
+ *
+ *@author Adrian Castro
+ */
+
+
+package Interfaces;
+
+import javax.swing.JOptionPane;
+
+public class Rutina18 {
+    
+    
+    
+    public static void main(String [] args){
+    
+        String num1;
+        String num2;
+        int valor1; 
+        int valor2;
+        int suma;
+        
+        JOptionPane.showMessageDialog(null,"Bienvenidos");
+        
+        num1 = JOptionPane.showInputDialog("Escriba el primer numero");
+        valor1=Integer.parseInt(num1);
+        num2 = JOptionPane.showInputDialog("Escriba el segundo numero");
+        valor2=Integer.parseInt(num2);
+        
+        suma=valor1+valor2;
+        
+        JOptionPane.showMessageDialog(null, "la suma de los numeros es : " + suma );
+
+        
+        
+        
+        System.exit(0);
+        
+        
+    }       
+        
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+ * Mostrar en pantalla mi nombre.
+ * 
+ * @author Adrian Castro
+ */
+package Interfaces;
+
+
+
+
+public class Rutina19 {
+    public static void main(String[] args) {
+
+    String estado;
+        
+        
+
+        
+        
+        estado = JOptionPane.showInputDialog(null, "Escriba su nombre");
+        JOptionPane.showMessageDialog(null, "Bienvenido a este cuadro  " + estado);
+        
+        System.exit(0);
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
